@@ -12,7 +12,7 @@
 	<packaging>war</packaging>
 	<name>Spring Boot Web JSP Sample</name>
 	<description>Spring Boot Web JSP Sample</description>
-	<version>0.0.1</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<url>http://projects.spring.io/spring-boot/</url>
 	<organization>
 		<name>Pivotal Software, Inc.</name>
@@ -62,8 +62,8 @@
 
 	<scm>
 		<connection>scm:git:git@github.com:rph818/study01.git</connection>
-	  <tag>step1-0.0.1</tag>
-  </scm>
+		<url>https://github.com/rph818/study01.git</url>
+  	</scm>
 
 	<build>
 		<plugins>
