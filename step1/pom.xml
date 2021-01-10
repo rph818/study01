@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<!-- Your own application should inherit from spring-boot-starter-parent -->
@@ -47,6 +49,22 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>TestRelease</id>
+			<url>https://pkgs.dev.azure.com/runpinghuang/runping_huang/_packaging/TestRelease/maven/v1</url>
+		</repository>
+		<snapshotRepository>
+			<id>TestSnapshot</id>
+			<url>https://pkgs.dev.azure.com/runpinghuang/runping_huang/_packaging/TestSnapshot/maven/v1</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<scm>
+		<connection>scm:git:git@github.com:rph818/study01.git</connection>
+	</scm>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -60,6 +78,12 @@
 					<useSystemClassLoader>false</useSystemClassLoader>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>3.0.0-M1</version>
+			</plugin>
 		</plugins>
+
 	</build>
 </project>
